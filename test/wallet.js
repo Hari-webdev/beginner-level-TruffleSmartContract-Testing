@@ -18,7 +18,7 @@ contract("Wallet",(accounts)=>{
 
     it('Should deposit ether to wallet', async() =>{
         await Deployed.deposit({from:accounts[0], value: 100 }); // this is structure of deposit 
-        const balance = await web3.eth.getBalance(Deployed.address) // For finding balance ether help of web.js
+        const balance = await web3.eth.getBalance(Deployed.address) // For finding balance ether help of web3.js
         //console.log( balance);
         assert(parseInt(balance) === 100);
     })
